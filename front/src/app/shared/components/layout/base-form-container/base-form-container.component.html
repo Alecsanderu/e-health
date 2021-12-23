@@ -1,0 +1,9 @@
+<ng-container>
+    <ng-content></ng-content>
+    <p-confirmDialog [style]="{width: '50vw'}"
+                     [baseZIndex]="10000"
+                     rejectButtonStyleClass="p-button-text"
+                     acceptLabel="DA"
+                     rejectLabel="NU"></p-confirmDialog>
+    <p-toast position="bottom-center" [preventOpenDuplicates]="true"></p-toast>
+</ng-container>

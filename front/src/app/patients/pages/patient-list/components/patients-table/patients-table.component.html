@@ -1,0 +1,34 @@
+<p-table [columns]='_selectedColumns'
+         [value]='(patients$ | async)!'
+         responsiveLayout='scroll'>
+    <ng-template pTemplate='caption'>
+        <div class='flex justify-content-between align-items-center'>
+            <p-multiSelect [options]='cols'
+                           [(ngModel)]='_selectedColumns'
+                           optionLabel='header'
+                           selectedItemsLabel='{0} coloane selectate' [style]="{minWidth: '200px'}"
+                           placeholder='Alege coloanele'></p-multiSelect>
+            <app-primary-button label='Pacient' icon='pi pi-plus'
+                                (onClick)='openDoctorCreateModal()'></app-primary-button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate='header' let-columns>
+        <tr>
+            <th *ngFor='let col of columns'>
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate='body' let-patient let-columns='columns'>
+        <tr>
+            <td *ngFor='let col of columns'>
+                <span *ngIf="col.field !== 'checkOutDate' || patient[col.field] !== '-'">{{ patient[col.field] }}</span>
+                <app-success-button
+                    *ngIf="col.field === 'checkOutDate' && patient[col.field] === '-'"
+                    label='Externeaza' (onClick)='checkOutPatient(patient.id)'
+                    [disabled]='(checkOutPatientLoading$ | async)!'
+                    [loading]='(checkOutPatientLoading$ | async)!'></app-success-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

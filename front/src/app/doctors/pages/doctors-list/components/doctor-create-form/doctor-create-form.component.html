@@ -1,0 +1,33 @@
+<form [formGroup]='form'>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='fullName'
+                    label='Nume complet'></app-text-input>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='qualification'
+                    label='Titulatura'></app-text-input>
+    <app-phone-input [required]='true'
+                     class='p-fluid'
+                     formControlName='phone'
+                     label='Telefon'></app-phone-input>
+    <app-select-input [required]='true'
+                      formControlName='workShift'
+                      class='p-fluid'
+                      placeholder="Selecteaza tura*"
+                      [optionsToDisplay]='(workShiftOptions$ | async)!'></app-select-input>
+    <app-multi-select-input [required]='true'
+                            formControlName='workingDays'
+                            class='p-fluid'
+                            label='Zile lucratoare'
+                            [optionsToDisplay]='(weekDayOptions$ | async)!'></app-multi-select-input>
+    <app-select-input [required]='true'
+                      formControlName='departmentId'
+                      class='p-fluid'
+                      placeholder="Selecteaza Departament*"
+                      [optionsToDisplay]='(departmentOptions$ | async)!'></app-select-input>
+    <div class='p-fluid mt-6'>
+        <app-primary-button (onClick)='onSubmit()'
+                            label='Adauga doctor'></app-primary-button>
+    </div>
+</form>

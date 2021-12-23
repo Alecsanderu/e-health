@@ -1,0 +1,3 @@
+export const CONFIG_FILE = 'CONFIG_FILE';
+export const JWT_SECRET = 'JWT_SECRET';
+export const GLOBAL_ERROR_HANDLER = 'GLOBAL_ERROR_HANDLER';

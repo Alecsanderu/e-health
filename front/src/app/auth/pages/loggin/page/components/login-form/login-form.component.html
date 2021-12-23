@@ -1,0 +1,16 @@
+<form [formGroup]='loginForm'>
+  <app-email-input [required]='true'
+                   class='p-fluid'
+                   formControlName='email'
+                   label='Email'></app-email-input>
+  <app-password-input [required]='true'
+                      class='p-fluid'
+                      [feedback]='false'
+                      formControlName='password'
+                      label='Parola'></app-password-input>
+  <div class='p-fluid mt-6'>
+    <app-primary-button (onClick)='onSubmit()'
+                        [disabled]='!loginForm.valid'
+                        label='Intra in cont'></app-primary-button>
+  </div>
+</form>

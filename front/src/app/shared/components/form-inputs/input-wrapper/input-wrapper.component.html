@@ -1,0 +1,12 @@
+<div class='p-field mb-4'>
+    <span [class]=isFloatLabel() style='width: 100%'>
+        <i *ngIf='touched' [ngClass]='[statusIcon, iconClass]'></i>
+        <ng-content></ng-content>
+        <label *ngIf='label' [for]='name'>{{ label }}<strong *ngIf='required' class='text-primary'>*</strong></label>
+    </span>
+  <small style='color: var(--gray-500); font-size: 0.6rem'
+         class='font-italic font-light'>{{ helpText }}</small>
+  <app-input-errors [errors]='errors'
+                    [displayErrors]='touched && !valid'></app-input-errors>
+</div>
+

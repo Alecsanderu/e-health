@@ -1,0 +1,16 @@
+<form [formGroup]='form'>
+  <app-text-input [required]='true'
+                  class='p-fluid'
+                  formControlName='name'
+                  label='Denumire'></app-text-input>
+  <app-number-input [required]='true'
+                    class='p-fluid'
+                    formControlName='capacity'
+                    suffix=' paturi'
+                    label='Capacitate'></app-number-input>
+  <div class='p-fluid mt-6'>
+    <app-primary-button (onClick)='onSubmit()'
+                        [disabled]='!form.valid || (createDeptLoading$ | async)!'
+                        label='Adauga departament'></app-primary-button>
+  </div>
+</form>

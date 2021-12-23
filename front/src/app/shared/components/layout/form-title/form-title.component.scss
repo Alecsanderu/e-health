@@ -1,0 +1,20 @@
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+i {
+  margin-right: 7px;
+  font-size: 1.2rem;
+}
+
+
+.p-button.p-button-icon-only.p-button-rounded {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}

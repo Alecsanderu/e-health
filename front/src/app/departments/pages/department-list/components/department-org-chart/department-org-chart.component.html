@@ -1,0 +1,12 @@
+<p-organizationChart [value]='(orgChartData$ | async)!'
+                     styleClass='company'>
+  <ng-template let-node pTemplate='doctor'>
+    <span>{{node.label}}</span>
+  </ng-template>
+  <ng-template let-node pTemplate='patient'>
+    <span>{{node.label}}</span>
+  </ng-template>
+  <ng-template let-node pTemplate='dept'>
+    <div style='background: var(--blue-500)'><span style='font-weight:bold'>{{node.label}}</span></div>
+  </ng-template>
+</p-organizationChart>

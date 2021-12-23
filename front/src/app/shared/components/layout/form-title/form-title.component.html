@@ -1,0 +1,10 @@
+<div class="form-title">
+    <h3><i [ngClass]="icon"></i>{{text}}</h3>
+    <span *ngIf="showEditButton" class="editButton">
+      <button (click)="onButtonClicked()"
+              class="p-button-rounded p-button-secondary p-p-3"
+              [icon]="changeEnableIcon()"
+              pButton
+              type="button"></button>
+  </span>
+</div>

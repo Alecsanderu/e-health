@@ -1,0 +1,16 @@
+:host ::ng-deep .p-organizationchart {
+  .doctor {
+    background-color: #7247bc;
+    color: #ffffff;
+  }
+
+  .patient {
+    background-color: #a534b6;
+    color: #ffffff;
+  }
+
+  .dept {
+    background-color: var(--blue-500);
+    color: #ffffff;
+  }
+}

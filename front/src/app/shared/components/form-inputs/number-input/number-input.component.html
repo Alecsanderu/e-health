@@ -1,0 +1,26 @@
+<div [disabled]='controlDir.control!.disabled! || disableInput'
+     [errors]='errorsAsArray'
+     [helpText]='helpText'
+     [label]='label'
+     [name]='controlDir.name!'
+     [required]='required'
+     [touched]='controlDir.control!.touched!'
+     [valid]='controlDir.control!.valid!'
+     app-input-wrapper
+     class='p-field'>
+    <p-inputNumber
+        (onBlur)='onBlur()'
+        (onInput)='onChange($any($event).value)'
+        [disabled]='controlDir.control!.disabled! || disableInput'
+        [id]='controlDir.name!'
+        [maxFractionDigits]='fractionalDigits'
+        [minFractionDigits]='fractionalDigits'
+        [ngClass]="validClass || ''"
+        [ngModel]='value'
+        [placeholder]='placeholder'
+        [suffix]='suffix'
+        [min]='min'
+        [max]='max'
+        class='number-input'
+        mode='decimal'></p-inputNumber>
+</div>

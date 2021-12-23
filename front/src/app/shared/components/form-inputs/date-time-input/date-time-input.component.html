@@ -1,0 +1,28 @@
+<div [disabled]="controlDir.control!.disabled! || disableInput || keepDisabled"
+     [errors]="errorsAsArray"
+     [label]="label"
+     [required]="required"
+     [touched]="controlDir.control!.touched!"
+     [valid]="controlDir.control!.valid!"
+     [helpText]="helpText"
+     app-input-wrapper
+     class="p-field">
+
+    <p-calendar (onBlur)="onBlur()"
+                (onSelect)="onChange($any($event))"
+                [(ngModel)]="value"
+                [disabled]="controlDir.control!.disabled! || disableInput || keepDisabled"
+                [id]="controlDir.name!"
+                [ngClass]="validClass || ''"
+                [showButtonBar]="true"
+                [monthNavigator]="true"
+                [yearNavigator]="true"
+                [showTime]="true"
+                hourFormat="24"
+                yearRange="1920:2100"
+                class="date-input"
+                dateFormat="dd.mm.yy">
+
+    </p-calendar>
+</div>
+

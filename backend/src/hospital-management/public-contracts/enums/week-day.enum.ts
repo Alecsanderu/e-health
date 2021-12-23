@@ -1,0 +1,9 @@
+export enum WeekDayEnum {
+    Monday    = 'mo',
+    Tuesday   = 'tu',
+    Wednesday = 'we',
+    Thursday  = 'th',
+    Friday    = 'fr',
+    Saturday  = 'sa',
+    Sunday    = 'su'
+}

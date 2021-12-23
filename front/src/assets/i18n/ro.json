@@ -1,0 +1,65 @@
+{
+  "C": {
+    "MANDATORY": "Obligatoriu"
+  },
+  "E": {
+    "REQUIRED": "Campul este obligatoriu",
+    "EMAIL": "Adresa de email invalida",
+    "ISEMAIL": "Adresa de email invalida",
+    "BAD_REQUEST": {
+      "BODY": "Datele introduse sunt incorecte",
+      "HasMinNWords": "Numele trebuie sa contina cel putin 2 cuvinte",
+      "IsPhone": "Numarul de telefon nu este valid"
+    },
+    "BASE_ERROR": {
+      "TITLE": "Eroare in procesarea cererii",
+      "BODY": "Cererea ta nu poate fi procesata momentan"
+    },
+    "UNAUTHORIZED_ERROR": {
+      "TITLE": "Nu esti autorizat",
+      "BODY": "Nu esti autorizat pentru aceasta cerere"
+    },
+    "FORBIDDEN_ERROR": {
+      "TITLE": "Nu esti acces",
+      "BODY": "Momentan nu ai acces la aceasta cerere"
+    }
+  },
+  "FORM_INPUT_ERRORS": {
+    "IsEqualOrGreaterThan": "Nu poate fi mai mic decat 0",
+    "emailIsUnique": "Utilizatorul este deja inregistrat",
+    "required": "Camp obligatoriu",
+    "email": "Adresa de email introdusa nu este valida",
+    "IsEmail": "Adresa de email introdusa nu este valida",
+    "isEmail": "Adresa de email introdusa nu este valida",
+    "phoneIsUnique": "Numarul de telefon exista deja",
+    "duplicate_email": "Adresa de email exista deja",
+    "min": "Valoarea introdusa este prea mica",
+    "IsValidDate": "Data introdusa nu este valida",
+    "IsPhone": "Numarul de telefon introdus nu este valid",
+    "minlength": "Numar minim de caractere",
+    "HasMinimumLength": "Numar minim de caractere",
+    "IsNumber": "Introduceti doar cifre",
+    "HasMaximumLength": "Numar maxim de caractere",
+    "HasMinNWords": "Cel putin 2 cuvinte"
+  },
+  "ENUM_LABELS": {
+    "WorkShiftEnum": {
+      "day": "Tura de zi",
+      "night": "Tura de noapte"
+    },
+    "WeekDayEnum": {
+      "mo": "Luni",
+      "tu": "Marti",
+      "we": "Miercuri",
+      "th": "Joi",
+      "fr": "Vineri",
+      "sa": "Sambata",
+      "su": "Duminica"
+    },
+    "GenderEnum": {
+      "male": "M",
+      "female": "F",
+      "unknown": "-"
+    }
+  }
+}

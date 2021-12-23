@@ -1,0 +1,40 @@
+<form [formGroup]='registerForm'>
+  <div class='p-fluid mb-5'>
+    <app-email-input [required]='true'
+                     class='p-fluid'
+                     formControlName='email'
+                     label='Email'></app-email-input>
+  </div>
+  <div class='p-fluid mb-5'>
+    <app-password-input [required]='true'
+                        class='p-fluid'
+                        formControlName='password'
+                        label='Parola'></app-password-input>
+  </div>
+  <div class='p-fluid mb-5'>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='name'
+                    label='Nume'>
+    </app-text-input>
+  </div>
+  <div class='p-fluid mb-5'>
+    <app-phone-input [required]='true'
+                     class='p-fluid'
+                     formControlName='phone'
+                     label='Telefon'>
+    </app-phone-input>
+  </div>
+  <div class='p-fluid mb-5'>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='address'
+                    label='Adresa'>
+    </app-text-input>
+  </div>
+  <div class='p-fluid mt-5'>
+    <app-primary-button (onClick)='onSubmit()'
+                        [disabled]='!registerForm.valid'
+                        label='Creeaza cont'></app-primary-button>
+  </div>
+</form>

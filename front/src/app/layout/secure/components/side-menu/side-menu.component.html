@@ -1,0 +1,7 @@
+<p-sidebar #sidebar
+           [(visible)]="visible"
+           [baseZIndex]="10000"
+           (onHide)="onSideMenuClosed()">
+  <h3 class="mb-3">Meniu principal</h3>
+  <p-menu [model]="menuItems"></p-menu>
+</p-sidebar>

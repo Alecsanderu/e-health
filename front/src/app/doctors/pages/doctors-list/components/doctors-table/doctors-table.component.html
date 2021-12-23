@@ -1,0 +1,29 @@
+<p-orderList [value]='(doctors$ | async)!' [listStyle]="{'max-height':'30rem'}" header='Lista doctorilor'
+             filterBy='fullName' filterPlaceholder='Filtreaza dupa nume'>
+    <ng-template pTemplate='header'>
+        <div class='flex justify-content-between align-items-center'>
+            <h3>Doctori</h3>
+            <app-primary-button label='Doctor' icon='pi pi-plus'
+                                (onClick)='openDoctorCreateModal()'></app-primary-button>
+        </div>
+    </ng-template>
+    <ng-template let-doctor pTemplate='item'>
+        <div class='doctor-item'>
+            <div class='image-container'>
+                <img src='assets/images/doctor.jpg' [alt]='doctor.name' class='doctor-image' />
+            </div>
+            <div class='doctor-list-detail'>
+                <h2 class='p-mb-2'>{{doctor.fullName}}</h2>
+                <i class='pi pi-tag doctor-category-icon'></i>
+                <span class='doctor-category'>{{doctor.qualification}}</span>
+            </div>
+            <div class='doctor-list-action'>
+                <h4 class='mb-2'> Tel: {{doctor.phone}}</h4>
+                <app-primary-button styleType='text' (onClick)='openDoctorSchedule()' label='Program' class='p-mb-2'>
+                    Detalii
+                </app-primary-button>
+            </div>
+        </div>
+    </ng-template>
+</p-orderList>
+

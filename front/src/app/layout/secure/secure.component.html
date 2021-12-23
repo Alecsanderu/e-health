@@ -1,0 +1,10 @@
+<app-navbar (sideMenuButtonClicked)="setSideMenuVisibility(true)"></app-navbar>
+<app-side-menu [visible]="sideMenuVisible"
+               (sideMenuClosed)="setSideMenuVisibility(false)"></app-side-menu>
+<main class="px-5 py-3">
+  <router-outlet></router-outlet>
+</main>
+<p-toast position="bottom-center" [preventOpenDuplicates]="true" [baseZIndex]="9999999999"></p-toast>
+
+
+

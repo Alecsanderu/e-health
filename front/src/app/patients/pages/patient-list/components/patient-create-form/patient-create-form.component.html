@@ -1,0 +1,42 @@
+<form [formGroup]='form'>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='fullName'
+                    label='Nume complet'></app-text-input>
+    <app-select-input [required]='true'
+                      class='p-fluid'
+                      [optionsToDisplay]='(genderOptions$ | async)!'
+                      formControlName='gender'
+                      placeholder='Selecteaza sex*'></app-select-input>
+    <app-text-input [required]='true'
+                    class='p-fluid'
+                    formControlName='diagnostic'
+                    label='Diagnostic'></app-text-input>
+    <app-text-input [required]='true'
+                    formControlName='contact'
+                    class='p-fluid'
+                    label='Contact'></app-text-input>
+    <app-text-input [required]='false'
+                    formControlName='emergencyContact'
+                    class='p-fluid'
+                    label='Contact de urgenta'></app-text-input>
+    <app-text-input [required]='false'
+                    formControlName='address'
+                    class='p-fluid'
+                    label='Adresa'></app-text-input>
+    <div class='p-fluid'>
+        <app-date-input [required]='true' label='Data nasterii' formControlName='dob'></app-date-input>
+    </div>
+    <div class='p-fluid'>
+        <app-date-input [required]='false' label='Data externare' formControlName='checkOutDate'></app-date-input>
+    </div>
+    <app-select-input [required]='true'
+                      formControlName='departmentId'
+                      class='p-fluid'
+                      placeholder='Selecteaza Departament*'
+                      [optionsToDisplay]='(departmentOptions$ | async)!'></app-select-input>
+    <div class='p-fluid mt-6'>
+        <app-primary-button (onClick)='onSubmit()'
+                            label='Adauga pacient'></app-primary-button>
+    </div>
+</form>
